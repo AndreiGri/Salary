@@ -23,7 +23,10 @@ int main()
     cin >> salary3;
     cout << " ---------------Вычисляем---------------" << endl;
 
-    if (salary1 > salary2 && salary1 > salary3) {
+    maximum = max({ salary1,salary2,salary3 });
+    minimum = min({ salary1,salary2,salary3 });
+
+    /*if (salary1 > salary2 && salary1 > salary3) {
         maximum = salary1;
     }
     else {
@@ -45,13 +48,12 @@ int main()
         else {
             minimum = salary3;
         }
-    }
+    }*/
 
     cout << " Максимальная зарплата в отделе " << maximum << " рублей," << endl;
     cout << " Разница между самой большой и самой маленькой зарплатами составляет ";
     cout << maximum - minimum << " рублей," << endl;
     cout << " Средняя зарплата по отделу ";
-
     cout << (salary1 + salary2 + salary3) / 3 << " рублей." << endl;
 
     // Задержка окна консоли:
